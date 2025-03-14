@@ -1,8 +1,0 @@
-path: lobster_data  # Path to the dataset
-train: ./images/train  # Training images folder
-val: ./images/val  # Validation images folder
-test: ./images/test
-# name:0 lobster
-names:
-    
-    0: lobster

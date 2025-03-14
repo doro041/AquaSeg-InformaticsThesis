@@ -1,0 +1,7 @@
+path: lobster_data
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['egg-bearied-lobsters', 'undefined-lobsters']
