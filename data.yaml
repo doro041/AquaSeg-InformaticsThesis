@@ -1,6 +1,6 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+train: /scratch/users/u17ds20/Pipeline/datasets/lobster_data/train/images
+val: /scratch/users/u17ds20/Pipeline/datasets/lobster_data/valid/images
+test: /scratch/users/u17ds20/Pipeline/datasets/lobster_data/test/images
 
 nc: 2
 names: ['egg-bearied-lobsters', 'undefined-lobsters']
