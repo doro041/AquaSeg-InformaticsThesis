@@ -1,7 +1,13 @@
-path: lobster_data
 train: ../train/images
 val: ../valid/images
 test: ../test/images
 
 nc: 2
 names: ['egg-bearied-lobsters', 'undefined-lobsters']
+
+roboflow:
+  workspace: lobsters
+  project: lobsterseggnoeggs
+  version: 1
+  license: Public Domain
+  url: https://universe.roboflow.com/lobsters/lobsterseggnoeggs/dataset/1
