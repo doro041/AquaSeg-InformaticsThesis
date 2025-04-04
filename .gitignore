@@ -1,0 +1,14 @@
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.bmp
+**/*.tif
+**/*.tiff
+**/*.txt
+*.pt
+evaluation_seg/segGT/segGT/labels/*
+inference/sam2.1_b.pt
+inference/sam2_b.pt
+inference/mobile_sam.pt
+inference/yolo11n_egg_noegg.pt
+inference/yolo12n_egg_noegg.pt

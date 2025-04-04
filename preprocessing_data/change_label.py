@@ -22,8 +22,8 @@ for split in ["train", "val", "test"]:
         with open(annotation_path, 'w') as file:
             for line in lines:
                 parts = line.split()
-                if parts and parts[0] == '1':  # If the first symbol is '1'
-                    parts[0] = '0'  # Change it to '0'
-                file.write(' '.join(parts) + '\n')  # Write the modified line back
+                if parts and parts[0] == '1':  
+                    parts[0] = '0' 
+                file.write(' '.join(parts) + '\n')  
 
 print("Label modification completed!")
