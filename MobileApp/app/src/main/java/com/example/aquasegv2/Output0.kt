@@ -1,0 +1,17 @@
+package com.example.aquasegv2
+// the yolo11 output consists of bounding boxes, width,height, coefficient,classname
+data class Output0(
+    val x1: Float,
+    val y1: Float,
+    val x2: Float,
+    val y2: Float,
+    val cx: Float,
+    val cy: Float,
+    val w: Float,
+    val h: Float,
+    val cnf: Float,
+    val cls: Int,
+    val clsName: String,
+    val maskWeight: List<Float>
+
+)
