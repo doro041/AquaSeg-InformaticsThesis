@@ -1,5 +1,9 @@
 
-# User Manual
+
+# User Manual for AquasegV2
+![AquaSeg Demo]([.gif](https://github.com/doro041/Pipeline/blob/main/appworks.gif))
+
+
 
 ## Introduction
 
@@ -30,9 +34,6 @@ Upon launching AquaSeg, three main screens are accessible:
 - **About**: Version, credits, and support information.
 
 ## Using the Camera Feature
-
-![Camera screen showing real-time lobster detection and segmentation using YOLO11.](images/mobiledevelopment/yolo11.jpg)
-
 1. Go to the Camera screen.
 2. Point the camera at the lobster, ensuring the underside is visible.
 3. The app will highlight detected lobsters with colored masks (blue for egg-bearing, red for general).
