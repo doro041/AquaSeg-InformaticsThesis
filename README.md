@@ -1,7 +1,8 @@
 
 
 # User Manual for AquasegV2
-![AquaSeg Demo]([.gif](https://github.com/doro041/Pipeline/blob/main/appworks.gif))
+![AquaSeg Demo](https://github.com/doro041/Pipeline/blob/main/appworks.gif?raw=true)
+
 
 
 
