@@ -7,7 +7,7 @@
 
 
 ## Introduction
-
+Lobsters play a vital role in marine ecosystems and support valuable commercial fisheries. However, overharvesting—particularly of egg-bearing females—can threaten population sustainability. To protect these populations, many fisheries enforce strict regulations against harvesting berried lobsters (females carrying eggs), such as Scotland. Traditionally, detecting and verifying egg presence is done manually, which is time-consuming and prone to error.
 This user manual provides guidance for installing, configuring, and operating the AquaSeg mobile application for real-time detection and segmentation of egg-bearing lobsters. AquaSeg is designed for use by fisheries inspectors, marine biologists, conservationists, and fishers, enabling rapid, accurate identification of lobsters in field conditions using a standard Android mobile device.
 
 ## System Requirements
@@ -16,6 +16,8 @@ This user manual provides guidance for installing, configuring, and operating th
 - Minimum 3GB RAM recommended
 - At least 100MB free storage space
 - Camera with autofocus capability
+-  Internet access (for initial setup and updates)
+-  Java Development Kit (JDK) 11 or higher
 
 ## Installation
 
@@ -30,17 +32,18 @@ This user manual provides guidance for installing, configuring, and operating th
 
 Upon launching AquaSeg, three main screens are accessible:
 
-- **Introduction**: Overview of app features and intended use.
-- **Camera**: Main screen for real-time detection and segmentation.
-- **About**: Version, credits, and support information.
+- **Home**: Displays an overview of the application’s purpose and includes a button to navigate to the camera interface.
+- **Camera**:The core interface for real-time detection and segmentation of lobsters. Includes a toggle to switch between available detection architectures. The ability to zoom objects.
+- **About**: Contains version information, credits, and support contact details.
 
 ## Using the Camera Feature
 1. Go to the Camera screen.
 2. Point the camera at the lobster, ensuring the underside is visible.
 3. The app will highlight detected lobsters with colored masks (blue for egg-bearing, red for general).
-4. Use the pipeline toggle bar to switch between YOLO-only (faster) and YOLO+FastSAM (more detailed) segmentation.
+4. Use the pipeline toggle bar to switch between YOLO-only (faster) and YOLO+FastSAM segmentation. YOLO+FastSAM is quite experimental at the moment.
 5. Tap the capture button to save a snapshot of the current view and segmentation result.
 6. Access saved images via your gallery.
+
 
 ## Best Practices
 
@@ -121,10 +124,10 @@ The project directory contains both machine learning pipelines and the mobile ap
 2. Save figures, tables, and logs properly.
 3. For visual comparison, add outputs to `comparison_direct/`, sorted by class and difficulty.
 
-| Quality Level | Description | Visual Characteristics (Compared to Ground Truth) |
+| Quality Level | Description | Visual Characteristics ) |
 |:--------------|:------------|:--------------------------------------------------|
-| High Quality | Prediction overlaps ground truth almost perfectly. | Precise boundaries, few false positives/negatives, tightly fit masks. |
-| Medium Quality | Prediction mostly correct with minor errors. | Minor boundary errors, slight over/under-segmentation. |
+| High Quality | Prediction overlaps ground truth almost perfectly. |Precise boundaries, very few false positives/negatives, masks tightly fit  objects. |
+| Medium Quality | Prediction mostly correct with minor errors. |Minor boundary errors, slight over-segmentation or under-segmentation.|
 | Low Quality | Prediction poorly matches ground truth. | Large areas missed, wrong masks, lots of noise/gaps. |
 
 ---
@@ -154,7 +157,8 @@ The project directory contains both machine learning pipelines and the mobile ap
 - Ensure the model can export to `.tflite`.
 - Adapt input/output mapping to fit the app’s pipeline.
 - Document any changes for reproducibility.
-- Profile model speed and memory usage before full deployment.
+- Profile model speed and memory usage before full deployment using the inference function `inference/inferencetime_recorded.py`.
+
 
 ### Dataset Expansion
 
